@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+.wrangler/
+*.log
+_source/
+_media/
+_assets/
+Assets/
