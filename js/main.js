@@ -52,4 +52,12 @@
     }, { passive: true });
     spinOnScroll();
   }
+  var contentToggles = document.querySelectorAll(".toggle-trigger");
+  contentToggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var item = btn.closest(".toggle");
+      var open = item.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
 })();

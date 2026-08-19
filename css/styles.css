@@ -334,6 +334,81 @@ h2.forest,
 }
 .split-text h2 { margin-bottom: 1rem; }
 .split-text .btn { margin-top: 0.8rem; }
+.intro-split {
+  margin-bottom: 2.4rem;
+  grid-template-columns: 1fr 2fr;
+}
+.intro-split:last-child { margin-bottom: 0; }
+.intro-leaf {
+  width: min(100%, 264px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 0;
+  border: 3px solid var(--lime);
+  border-radius: 0 58% 50% 50%;
+  box-shadow: var(--shadow);
+}
+.orchard-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem 3rem;
+  align-items: start;
+  grid-template-areas:
+    "photo heading"
+    "notes copy";
+}
+.orchard-photo {
+  grid-area: photo;
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  margin: 0 0 0.4rem;
+  border: 3px solid var(--lime);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+.orchard-intro .circle-stack {
+  grid-area: photo;
+  width: min(100%, 280px);
+  margin: 0;
+}
+.orchard-intro:not(:has(.orchard-notes)) {
+  grid-template-areas:
+    "photo heading"
+    "photo copy";
+  row-gap: 0.25rem;
+}
+.orchard-heading:not(:has(.note)) .forest-title { margin-bottom: 0; }
+.orchard-copy .btn + .forest-title { margin-top: 1.75rem; }
+.orchard-heading { grid-area: heading; }
+.orchard-notes { grid-area: notes; }
+.orchard-copy { grid-area: copy; }
+.note {
+  border-left: 4px solid var(--lime);
+  padding: 0.15rem 0 0.15rem 1rem;
+  margin: 0 0 1.15rem;
+}
+.note h3 {
+  color: var(--forest);
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+}
+.note p { margin: 0 0 0.45rem; }
+.note p:last-child { margin-bottom: 0; }
+.note a { color: var(--ink); text-decoration: none; }
+.note a:hover { color: var(--forest); }
+.ig-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: var(--lime);
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
 .brand-lead {
   font-family: var(--font-head);
   font-weight: 500;
@@ -430,6 +505,74 @@ h2.forest,
 }
 .photo-frame img { width: 100%; object-fit: cover; }
 
+.music-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem 3rem;
+  align-items: start;
+  margin-top: 0.6rem;
+}
+.music-aside {
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+}
+.music-aside p { margin: 0; }
+.music-cal {
+  width: 100%;
+  border-collapse: collapse;
+}
+.music-cal th,
+.music-cal td {
+  text-align: left;
+  padding: 0.55rem 0.85rem 0.55rem 0;
+  border-bottom: 1px solid var(--lime);
+  vertical-align: middle;
+}
+.music-cal th {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-bottom-width: 2px;
+}
+.music-cal td:first-child {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--forest);
+  white-space: nowrap;
+  width: 34%;
+}
+.music-cal td:last-child,
+.music-cal th:last-child {
+  width: 2.4rem;
+  padding-right: 0;
+  text-align: right;
+}
+.ig-mini {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: var(--lime);
+  color: #fff !important;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.ig-mini:hover {
+  background: var(--forest);
+}
+.music-photo {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -462,6 +605,59 @@ h2.forest,
 }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin: 0.45rem 0; }
+
+.toggles {
+  display: grid;
+  gap: 0;
+  margin: 1rem 0 1.5rem;
+  border-top: 1px solid var(--lime);
+}
+.toggle {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--lime);
+}
+.toggle-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-align: left;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.toggle-icon {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.toggle-icon::before { content: "+"; }
+.toggle.is-open .toggle-icon::before { content: "\2212"; }
+.toggle-panel {
+  display: none;
+  padding: 0 2.5rem 1.1rem 0;
+}
+.toggle.is-open .toggle-panel { display: block; }
+.toggle-panel p { margin: 0; }
 
 .hours {
   font-family: var(--font-head);
@@ -504,6 +700,42 @@ h2.forest,
 }
 .cta-band a { color: var(--white); }
 
+.manage-band {
+  min-height: 560px;
+  padding: 5rem var(--pad);
+  border-radius: 0;
+  background-image: url("https://media.cwd-cdn.com/jc-agri-orchards/images/maintenance-consultants.jpg");
+}
+.manage-band::before {
+  background: rgba(20, 55, 17, 0.38);
+}
+.manage-band::after { content: none; }
+.manage-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+.manage-list li {
+  font-family: var(--font-head);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  margin: 0.4rem 0;
+}
+.manage-tag {
+  font-family: var(--font-head);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  margin: 0 0 1.5rem;
+}
+
 .notice {
   background: var(--cream);
   border-left: 5px solid var(--lime);
@@ -516,6 +748,10 @@ h2.forest,
   border-radius: 10px;
 }
 .rules h3 { color: var(--forest); }
+.rules-mark {
+  width: min(100%, 420px);
+  margin: 0 0 1.2rem;
+}
 .rules ol, .rules ul { padding-left: 1.2rem; }
 .rules li { margin: 0.55rem 0; }
 
@@ -553,28 +789,26 @@ h2.forest,
   letter-spacing: 0.04em;
   font-weight: 500;
   color: var(--white);
-  margin: 0;
+  margin: 0 0 1.4rem;
 }
-.footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.6rem;
-}
-.footer-people {
+.footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem 2rem;
-  margin-bottom: 2.2rem;
-}
-.footer-places {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 2.5rem;
   align-items: start;
   padding-bottom: 2.5rem;
+}
+.footer-people {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.footer-people .btn { align-self: flex-start; margin-top: 0.3rem; }
+.footer-places {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 .quote {
   border-left: 4px solid var(--lime);
@@ -636,12 +870,11 @@ h2.forest,
   border-radius: 6px;
 }
 .legal {
-  background: var(--forest);
+  background: #10270d;
   color: var(--white);
   text-align: center;
   padding: 1.1rem var(--pad) 1.4rem;
   font-size: 0.95rem;
-  border-top: 3px solid var(--lime);
 }
 .legal a { color: var(--lime); }
 
@@ -668,18 +901,48 @@ h2.forest,
     padding: 0 0 0 1rem;
   }
   .has-sub.is-open .sub-menu { display: flex; }
-  .split, .two, .footer-people, .footer-places, .form-row, .markets { grid-template-columns: 1fr; }
+  .split, .two, .footer-grid, .footer-places, .form-row, .markets { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr 1fr; }
   .hero { min-height: 46vh; }
   .hero-home { background-image: url("https://media.cwd-cdn.com/jc-agri-orchards/images/hero-apples-mobile.jpg"); }
   .hero-royal { background-image: url("https://media.cwd-cdn.com/jc-agri-orchards/images/royal-hero-mobile.jpg"); }
   .hero-kennedy { background-image: url("https://media.cwd-cdn.com/jc-agri-orchards/images/kennedy-hero-mobile.jpg"); }
   .split-text { text-align: center; }
+  .intro-leaf { margin: 0 auto; }
+  .orchard-intro {
+    grid-template-columns: minmax(0, 280px) 1fr;
+    gap: 1.6rem 2rem;
+    grid-template-areas:
+      "photo heading"
+      "notes notes"
+      "copy copy";
+  }
+  .orchard-intro:not(:has(.orchard-notes)) {
+    grid-template-areas:
+      "photo heading"
+      "copy copy";
+  }
 }
 
 @media (max-width: 640px) {
   .card-grid { grid-template-columns: 1fr; }
   .logo img { width: 112px; }
+  .music-layout { grid-template-columns: 1fr; }
+  .orchard-intro {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "photo"
+      "notes"
+      "copy";
+  }
+  .orchard-intro:not(:has(.orchard-notes)) {
+    grid-template-areas:
+      "heading"
+      "photo"
+      "copy";
+  }
+  .orchard-photo { margin: 0 0 0.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce), (hover: none) {
