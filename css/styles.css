@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 340px;
   background: var(--white);
   border-top: 3px solid var(--lime);
   box-shadow: var(--shadow);
@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5 {
 .has-sub:focus-within .sub-menu { display: flex; }
 .has-sub .sub-menu a {
   display: block;
-  padding: 0.55rem 1.1rem;
+  padding: 0.55rem 1.75rem;
   white-space: nowrap;
 }
 
