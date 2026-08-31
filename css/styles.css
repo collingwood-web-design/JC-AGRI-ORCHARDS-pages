@@ -884,6 +884,29 @@ a.circle-link {
   font: inherit;
   background: var(--white);
 }
+.contact-form .form-choices {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.contact-form .form-choices legend {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
+  padding: 0;
+}
+.contact-form .choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  margin: 0.25rem 0;
+}
+.contact-form .choice input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--lime);
+}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
