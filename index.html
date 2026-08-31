@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,17 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="JC Agri Orchards">
+  <meta property="og:locale" content="en_CA">
   <meta property="og:title" content="JC Agri Orchards | Orchard Care &amp; Pick Your Own">
   <meta property="og:description" content="JC Agri Orchards cares for fruit orchards across Ontario and welcomes families to pick apples at Royal Orchards in King City and Kennedy Orchards in Nottawa.">
   <meta property="og:image" content="https://media.cwd-cdn.com/jc-agri-orchards/images/hero-apples.jpg">
+  <meta property="og:image:alt" content="Apples growing in a JC Agri Orchards tree">
   <meta property="og:url" content="https://jcagriorchards.ca/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="JC Agri Orchards | Orchard Care &amp; Pick Your Own">
   <meta name="twitter:description" content="JC Agri Orchards cares for fruit orchards across Ontario and welcomes families to pick apples at Royal Orchards in King City and Kennedy Orchards in Nottawa.">
   <meta name="twitter:image" content="https://media.cwd-cdn.com/jc-agri-orchards/images/hero-apples.jpg">
+  <meta name="twitter:image:alt" content="Apples growing in a JC Agri Orchards tree">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,6 +39,24 @@
           "https://www.facebook.com/jcagriorchards",
           "https://www.instagram.com/jcagriorchards/"
         ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jcagriorchards.ca/#website",
+        "name": "JC Agri Orchards",
+        "url": "https://jcagriorchards.ca/",
+        "publisher": { "@id": "https://jcagriorchards.ca/#organization" },
+        "inLanguage": "en-CA"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://jcagriorchards.ca/#webpage",
+        "url": "https://jcagriorchards.ca/",
+        "name": "JC Agri Orchards | Orchard Care & Pick Your Own",
+        "description": "JC Agri Orchards cares for fruit orchards across Ontario and welcomes families to pick apples at Royal Orchards in King City and Kennedy Orchards in Nottawa.",
+        "isPartOf": { "@id": "https://jcagriorchards.ca/#website" },
+        "about": { "@id": "https://jcagriorchards.ca/#organization" },
+        "inLanguage": "en-CA"
       },
       {
         "@type": ["LocalBusiness", "Farm"],
@@ -55,9 +76,9 @@
         },
         "geo": { "@type": "GeoCoordinates", "latitude": 43.958656, "longitude": -79.565733 },
         "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "16:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "17:00" }
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "17:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "18:00" }
         ]
       },
       {
@@ -85,11 +106,13 @@
     ]
   }
   </script>
+  <link rel="preload" as="image" href="https://media.cwd-cdn.com/jc-agri-orchards/images/hero-apples.jpg" fetchpriority="high">
   <link rel="icon" href="https://media.cwd-cdn.com/jc-agri-orchards/images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="https://media.cwd-cdn.com/jc-agri-orchards/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://media.cwd-cdn.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/styles.css">
@@ -98,8 +121,8 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="social-bar">
     <div class="wrap social-bar-inner">
-      <a href="https://www.facebook.com/jcagriorchards" target="_blank" rel="noopener" aria-label="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/jcagriorchards/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/jcagriorchards" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/jcagriorchards/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
   <header class="site-header">
@@ -145,7 +168,7 @@
       <div class="wrap split about-split">
         <div class="about-visual">
           <img class="about-spin js-spin" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-apple-orchards.png" alt="">
-          <img class="about-leaf" src="https://media.cwd-cdn.com/jc-agri-orchards/images/orchard-maintenance.jpg" alt="Ripe apples in the JC Agri Orchards trees">
+          <img class="about-leaf" src="https://media.cwd-cdn.com/jc-agri-orchards/images/orchard-maintenance.jpg" width="640" height="480" loading="lazy" decoding="async" alt="Ripe apples in the JC Agri Orchards trees">
         </div>
         <div class="split-text">
           <h2 class="forest-title">About Us</h2>
@@ -162,8 +185,8 @@
           <div>
             <a class="circle-link" href="royal-orchards.html">
               <div class="circle-stack">
-                <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/royal-hero.jpg" alt="Royal Orchards">
-                <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-royal.png" alt="">
+                <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/royal-hero.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Apple picking at Royal Orchards in King City">
+                <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-royal.png" width="480" height="480" loading="lazy" decoding="async" alt="">
               </div>
             </a>
             <h2 class="forest-title">Royal<br>Orchards</h2>
@@ -174,8 +197,8 @@
           <div>
             <a class="circle-link" href="kennedy-orchards.html">
               <div class="circle-stack">
-                <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/kennedy-apples.jpg" alt="Kennedy Orchards">
-                <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-kennedy.png" alt="">
+                <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/kennedy-apples.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Apples at Kennedy Orchards in Nottawa">
+                <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-kennedy.png" width="480" height="480" loading="lazy" decoding="async" alt="">
               </div>
             </a>
             <h2 class="forest-title">Kennedy<br>Orchards</h2>
@@ -190,7 +213,7 @@
       <div class="wrap split about-split">
         <div class="about-visual">
           <img class="about-spin js-spin" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-mulmur.png" alt="">
-          <img class="about-leaf" src="https://media.cwd-cdn.com/jc-agri-orchards/images/mulmur-apples.jpg" alt="Excess apples for Mulmur Cider Co">
+          <img class="about-leaf" src="https://media.cwd-cdn.com/jc-agri-orchards/images/mulmur-apples.jpg" width="640" height="480" loading="lazy" decoding="async" alt="Excess apples for Mulmur Cider Co">
         </div>
         <div class="split-text">
           <h2 class="forest-title">Mulmur Cider Co</h2>
@@ -221,8 +244,8 @@
           <blockquote class="quote">Paul Banjavcic – Operations Manager<br><a href="mailto:Pbanjavcic@gmail.com">Pbanjavcic@gmail.com</a></blockquote>
           <a class="btn" href="mailto:K.jcagri@gmail.com">Contact Us</a>
           <div class="footer-social">
-            <a href="https://www.facebook.com/jcagriorchards" target="_blank" rel="noopener" aria-label="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/jcagriorchards/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/jcagriorchards" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jcagriorchards/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-places">
@@ -240,8 +263,8 @@
       </div>
     </div>
     <div class="legal">
-      <div>&copy; Copyright <span id="copy-date">August 18, 2026</span>│JC Agri Orchard</div>
-      <p>Designed By: <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener">Collingwood Web Design</a></p>
+      <div>&copy; Copyright <span id="copy-date">August 18, 2026</span>│JC Agri Orchards</div>
+      <p>Designed By: <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener noreferrer">Collingwood Web Design</a></p>
     </div>
   </footer>
   <script src="js/main.js"></script>

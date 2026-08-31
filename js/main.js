@@ -5,22 +5,33 @@
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       document.body.classList.toggle("nav-open", open);
     });
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
+        if (link.parentElement && link.parentElement.classList.contains("has-sub") &&
+            window.matchMedia("(max-width: 980px)").matches) {
+          return;
+        }
         nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
         document.body.classList.remove("nav-open");
       });
     });
   }
 
-  document.querySelectorAll(".has-sub > a").forEach(function (link) {
+  document.querySelectorAll(".has-sub").forEach(function (item) {
+    var link = item.querySelector(":scope > a");
+    if (!link) return;
+    link.setAttribute("aria-haspopup", "true");
+    link.setAttribute("aria-expanded", "false");
     link.addEventListener("click", function (event) {
       if (window.matchMedia("(max-width: 980px)").matches) {
         event.preventDefault();
-        link.parentElement.classList.toggle("is-open");
+        var open = item.classList.toggle("is-open");
+        link.setAttribute("aria-expanded", open ? "true" : "false");
       }
     });
   });
@@ -52,10 +63,17 @@
     }, { passive: true });
     spinOnScroll();
   }
+
   var contentToggles = document.querySelectorAll(".toggle-trigger");
-  contentToggles.forEach(function (btn) {
+  contentToggles.forEach(function (btn, index) {
+    var item = btn.closest(".toggle");
+    var panel = item ? item.querySelector(".toggle-panel") : null;
+    var panelId = "toggle-panel-" + index;
+    if (panel) {
+      panel.id = panelId;
+      btn.setAttribute("aria-controls", panelId);
+    }
     btn.addEventListener("click", function () {
-      var item = btn.closest(".toggle");
       var open = item.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
