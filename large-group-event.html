@@ -81,70 +81,76 @@
       <div class="wrap">
         <h2 class="forest-title">Royal Orchards Booking Form</h2>
         <p>Group Events</p>
-        <form class="contact-form" action="#" method="post" onsubmit="return false">
+        <form id="contact-form" class="contact-form">
           <div>
             <label for="booking-name">Name First &amp; Last <span class="req">*</span></label>
-            <input id="booking-name" name="name" required>
+            <input id="booking-name" name="Name First &amp; Last" required>
           </div>
           <div class="form-row">
             <div>
               <label for="booking-phone">Phone</label>
-              <input id="booking-phone" name="phone" type="tel">
+              <input id="booking-phone" name="Phone" type="tel">
             </div>
             <div>
               <label for="booking-email">Email <span class="req">*</span></label>
-              <input id="booking-email" name="email" type="email" required>
+              <input id="booking-email" name="Email" type="email" required>
             </div>
           </div>
           <div>
             <label for="booking-billing">Billing Address <span class="req">*</span></label>
-            <input id="booking-billing" name="billing_address" required>
+            <input id="booking-billing" name="Billing Address" required>
           </div>
           <div>
             <label for="booking-group">School/Group Name <span class="req">*</span></label>
-            <input id="booking-group" name="group_name" required>
+            <input id="booking-group" name="School/Group Name" required>
           </div>
           <div>
             <label for="booking-address">Address <span class="req">*</span></label>
-            <input id="booking-address" name="group_address" required>
+            <input id="booking-address" name="Address" required>
           </div>
           <div>
             <label for="booking-date">Field/Group Trip Date <span class="req">*</span></label>
-            <input id="booking-date" name="trip_date" required>
+            <input id="booking-date" name="Field/Group Trip Date" required>
           </div>
           <div>
             <label for="booking-count">Guest Count <span class="req">*</span></label>
-            <input id="booking-count" name="guest_count" required>
+            <input id="booking-count" name="Guest Count" required>
           </div>
           <div>
             <label for="booking-ages">Student Age Range <span class="req">*</span></label>
-            <input id="booking-ages" name="age_range" required>
+            <input id="booking-ages" name="Student Age Range" required>
           </div>
           <div>
             <label for="booking-arrival">Arrival Time <span class="req">*</span></label>
-            <input id="booking-arrival" name="arrival" required>
+            <input id="booking-arrival" name="Arrival Time" required>
           </div>
           <div>
             <label for="booking-departure">Departure Time <span class="req">*</span></label>
-            <input id="booking-departure" name="departure" required>
+            <input id="booking-departure" name="Departure Time" required>
           </div>
           <div>
             <label for="booking-parking">Parking (Carpool or Bus) <span class="req">*</span></label>
-            <input id="booking-parking" name="parking" required>
+            <input id="booking-parking" name="Parking (Carpool or Bus)" required>
           </div>
           <div>
             <label for="booking-payment">Payment Method <span class="req">*</span></label>
-            <input id="booking-payment" name="payment_method" required>
+            <input id="booking-payment" name="Payment Method" required>
           </div>
           <div>
             <label for="booking-questions">Additional Questions</label>
-            <textarea id="booking-questions" name="questions" rows="5"></textarea>
+            <textarea id="booking-questions" name="Additional Questions" rows="5"></textarea>
           </div>
+          <input
+            type="text"
+            name="website"
+            data-cwd-honeypot
+            tabindex="-1"
+            autocomplete="off"
+            style="position:absolute;left:-9999px;opacity:0;height:0;width:0"
+            aria-hidden="true"
+          >
           <button class="btn" type="submit">Submit</button>
-          <div class="hp">
-            <label for="booking-hp">If you are human, leave this field blank.</label>
-            <input id="booking-hp" name="website" tabindex="-1" autocomplete="off">
-          </div>
+          <p data-cwd-contact-status role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -184,5 +190,6 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
 </body>
 </html>

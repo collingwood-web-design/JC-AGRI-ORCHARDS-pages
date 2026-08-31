@@ -870,6 +870,10 @@ a.circle-link {
   font-size: 0.95rem;
 }
 .contact-form .req { color: #8a1f1f; }
+.contact-form [data-cwd-contact-status] {
+  margin: 0.35rem 0 0;
+  font-weight: 700;
+}
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
