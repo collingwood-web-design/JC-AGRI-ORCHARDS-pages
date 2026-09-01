@@ -394,11 +394,12 @@ h2.forest,
 }
 .orchard-heading:not(:has(.note)) .forest-title { margin-bottom: 0; }
 .orchard-copy .btn + .forest-title { margin-top: 1.75rem; }
+.orchard-heading { grid-area: heading; }
 .orchard-heading h2 {
   font-size: 1.15rem;
   color: var(--muted);
   font-weight: 500;
-  margin: 0.25rem 0 0;
+  margin: 0.25rem 0 0.75rem;
 }
 .orchard-notes { grid-area: notes; }
 .orchard-copy { grid-area: copy; }
@@ -407,10 +408,16 @@ h2.forest,
   padding: 0.15rem 0 0.15rem 1rem;
   margin: 0 0 1.15rem;
 }
+.note > :first-child { margin-top: 0; }
 .note h3 {
   color: var(--forest);
   font-size: 1.15rem;
   margin: 0 0 0.4rem;
+}
+.prose .note h3,
+.prose .note h5,
+.prose .note > :first-child {
+  margin-top: 0;
 }
 .note p { margin: 0 0 0.45rem; }
 .note p:last-child { margin-bottom: 0; }
