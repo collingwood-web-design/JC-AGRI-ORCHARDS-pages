@@ -214,12 +214,28 @@
             aria-hidden="true"
           >
           <button class="btn" type="submit">Submit</button>
-          <p data-cwd-contact-status role="status" aria-live="polite"></p>
+          <p class="visually-hidden" data-cwd-contact-status role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
   </main>
+
+  <div class="form-modal" id="form-sent-modal" hidden>
+    <div class="form-modal-backdrop" data-form-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div class="form-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="form-sent-title">
+      <button type="button" class="form-modal-close" data-form-modal-close aria-label="Close">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="form-modal-icon" aria-hidden="true">
+        <i class="fa-solid fa-check form-modal-icon-mark"></i>
+      </div>
+      <h2 class="form-modal-title" id="form-sent-title">Booking Request Sent</h2>
+      <p class="form-modal-message" id="form-sent-message">Thank you — your booking request has been sent. We will be in touch soon.</p>
+      <button type="button" class="btn" data-form-modal-close>Close</button>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="wrap">
       <h2>Contact Us</h2>

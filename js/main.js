@@ -78,4 +78,66 @@
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
   });
+
+  var contactForm = document.getElementById("contact-form");
+  var formModal = document.getElementById("form-sent-modal");
+  if (contactForm && formModal) {
+    var modalTitle = formModal.querySelector("#form-sent-title");
+    var modalMessage = formModal.querySelector("#form-sent-message");
+    var modalIcon = formModal.querySelector(".form-modal-icon-mark");
+    var lastFocus = null;
+
+    function openFormModal(isError, message) {
+      lastFocus = document.activeElement;
+      if (modalTitle) {
+        modalTitle.textContent = isError ? "Could Not Send Request" : "Booking Request Sent";
+      }
+      if (modalMessage) {
+        modalMessage.textContent = message || (isError
+          ? "Sorry, we could not send your request. Please try again."
+          : "Thank you — your booking request has been sent. We will be in touch soon.");
+      }
+      if (modalIcon) {
+        modalIcon.className = isError
+          ? "fa-solid fa-circle-exclamation form-modal-icon-mark"
+          : "fa-solid fa-check form-modal-icon-mark";
+      }
+      formModal.classList.toggle("is-error", !!isError);
+      formModal.hidden = false;
+      document.body.classList.add("modal-open");
+      var closeBtn = formModal.querySelector(".form-modal-close");
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeFormModal() {
+      formModal.hidden = true;
+      formModal.classList.remove("is-error");
+      document.body.classList.remove("modal-open");
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    }
+
+    contactForm.addEventListener("cwd-contact:success", function (event) {
+      var message = (event.detail && event.detail.message)
+        ? event.detail.message.replace("your message", "your booking request")
+        : "Thank you — your booking request has been sent. We will be in touch soon.";
+      openFormModal(false, message);
+    });
+
+    contactForm.addEventListener("cwd-contact:error", function (event) {
+      var message = (event.detail && event.detail.message) || "Sorry, we could not send your request. Please try again.";
+      openFormModal(true, message);
+    });
+
+    formModal.querySelectorAll("[data-form-modal-close]").forEach(function (el) {
+      el.addEventListener("click", closeFormModal);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !formModal.hidden) {
+        closeFormModal();
+      }
+    });
+  }
 })();

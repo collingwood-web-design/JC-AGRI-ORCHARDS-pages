@@ -934,6 +934,79 @@ a.circle-link {
   margin: 0;
   accent-color: var(--lime);
 }
+
+.form-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: var(--pad);
+}
+.form-modal[hidden] { display: none; }
+.form-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 55, 17, 0.55);
+}
+.form-modal-dialog {
+  position: relative;
+  width: min(100%, 420px);
+  margin: 0;
+  padding: 2rem 1.75rem 1.75rem;
+  background: var(--white);
+  border-top: 5px solid var(--lime);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.form-modal-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--forest);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.form-modal-close:hover { background: var(--lime); }
+.form-modal-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--forest);
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+}
+.form-modal.is-error .form-modal-icon {
+  background: #f7e8e8;
+  color: #8a1f1f;
+}
+.form-modal-title {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+  margin: 0 0 0.65rem;
+}
+.form-modal-message {
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+  line-height: 1.55;
+}
+body.modal-open { overflow: hidden; }
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
