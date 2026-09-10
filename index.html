@@ -1,6 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JC Agri Orchards | Orchard Care &amp; Pick Your Own</title>
@@ -60,9 +72,9 @@
       },
       {
         "@type": ["LocalBusiness", "Farm"],
-        "@id": "https://jcagriorchards.ca/royal-orchards/#place",
+        "@id": "https://jcagriorchards.ca/royal-orchards#place",
         "name": "Royal Orchards",
-        "url": "https://jcagriorchards.ca/royal-orchards/",
+        "url": "https://jcagriorchards.ca/royal-orchards",
         "image": "https://media.cwd-cdn.com/jc-agri-orchards/images/royal-hero.jpg",
         "email": "K.jcagri@gmail.com",
         "parentOrganization": { "@id": "https://jcagriorchards.ca/#organization" },
@@ -83,9 +95,9 @@
       },
       {
         "@type": ["LocalBusiness", "Farm"],
-        "@id": "https://jcagriorchards.ca/kennedy-orchards/#place",
+        "@id": "https://jcagriorchards.ca/kennedy-orchards#place",
         "name": "Kennedy Orchards",
-        "url": "https://jcagriorchards.ca/kennedy-orchards/",
+        "url": "https://jcagriorchards.ca/kennedy-orchards",
         "image": "https://media.cwd-cdn.com/jc-agri-orchards/images/kennedy-hero.jpg",
         "email": "K.jcagri@gmail.com",
         "parentOrganization": { "@id": "https://jcagriorchards.ca/#organization" },
@@ -127,22 +139,22 @@
   </div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/jc-agri-orchards/images/logo.png" width="150" height="70" alt="JC Agri Orchards"></a>
+      <a class="logo" href="./"><img src="https://media.cwd-cdn.com/jc-agri-orchards/images/logo.png" width="150" height="70" alt="JC Agri Orchards"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
       <nav class="site-nav" id="site-nav">
         <ul>
-          <li><a href="orchard-management.html">Orchard Management</a></li>
-          <li><a href="index.html" class="is-current">About Us</a></li>
-          <li><a href="the-team.html">The Team</a></li>
+          <li><a href="orchard-management">Orchard Management</a></li>
+          <li><a href="./" class="is-current">About Us</a></li>
+          <li><a href="the-team">The Team</a></li>
           <li class="has-sub">
-            <a href="pick-your-own.html">Pick Your Own</a>
+            <a href="pick-your-own">Pick Your Own</a>
             <ul class="sub-menu">
-              <li><a href="royal-orchards.html">Royal Orchards</a></li>
-              <li><a href="kennedy-orchards.html">Kennedy Orchards</a></li>
-              <li><a href="large-group-event.html">Large Group Event</a></li>
+              <li><a href="royal-orchards">Royal Orchards</a></li>
+              <li><a href="kennedy-orchards">Kennedy Orchards</a></li>
+              <li><a href="large-group-event">Large Group Event</a></li>
             </ul>
           </li>
-          <li><a href="mulmur-cider-co.html">Mulmur Cider Co</a></li>
+          <li><a href="mulmur-cider-co">Mulmur Cider Co</a></li>
         </ul>
       </nav>
     </div>
@@ -161,7 +173,7 @@
         <p class="lede">Enhance the vitality and productivity of your orchard with the professional Fruit Tree Services offered by JC AGRI ORCHARDS.<br>
         Our passionate team is committed to transforming your space into a vibrant sanctuary of natural beauty and abundant harvests, fostering growth, maximizing fruit production, and ensuring lasting health.<br>
         Rely on us for a fruitful future.</p>
-        <div class="btn-center"><a class="btn" href="orchard-management.html">Orchard Management</a></div>
+        <div class="btn-center"><a class="btn" href="orchard-management">Orchard Management</a></div>
       </div>
     </section>
     <section class="section section-cream">
@@ -173,7 +185,7 @@
         <div class="split-text">
           <h2 class="forest-title">About Us</h2>
           <p><span class="brand-lead">JC Agri Orchards</span> has a skilled team of professionals based in South Georgian Bay, Ontario, ready to assist you. We know how important it is to keep your fruit trees healthy and productive, and we take pride in our craftsmanship. Our experienced team is dedicated to providing excellent care and maintenance for your fruit trees, ensuring they thrive and produce for many years to come. You won’t find a more qualified team anywhere else.</p>
-          <a class="btn" href="the-team.html">Meet the Team</a>
+          <a class="btn" href="the-team">Meet the Team</a>
         </div>
       </div>
     </section>
@@ -183,7 +195,7 @@
         <p class="lede">During the season, we eagerly anticipate welcoming you to one of our own PICK YOUR OWN orchards.</p>
         <div class="two" style="margin-top:2rem;text-align:center">
           <div>
-            <a class="circle-link" href="royal-orchards.html">
+            <a class="circle-link" href="royal-orchards">
               <div class="circle-stack">
                 <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/royal-hero.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Apple picking at Royal Orchards in King City">
                 <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-royal.png" width="480" height="480" loading="lazy" decoding="async" alt="">
@@ -192,10 +204,10 @@
             <h2 class="forest-title">Royal<br>Orchards</h2>
             <h3>Opening September 11!</h3>
             <p>The wait is almost over!<br><strong>We can’t wait to welcome you back to the orchard. 🍎</strong></p>
-            <a class="btn" href="royal-orchards.html">Read More</a>
+            <a class="btn" href="royal-orchards">Read More</a>
           </div>
           <div>
-            <a class="circle-link" href="kennedy-orchards.html">
+            <a class="circle-link" href="kennedy-orchards">
               <div class="circle-stack">
                 <img class="photo" src="https://media.cwd-cdn.com/jc-agri-orchards/images/kennedy-apples.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Apples at Kennedy Orchards in Nottawa">
                 <img class="ring" src="https://media.cwd-cdn.com/jc-agri-orchards/images/circle-kennedy.png" width="480" height="480" loading="lazy" decoding="async" alt="">
@@ -204,7 +216,7 @@
             <h2 class="forest-title">Kennedy<br>Orchards</h2>
             <h3>Opening September 19!</h3>
             <p>The wait is almost over!<br><strong>Get ready for another great apple season. 🍎</strong></p>
-            <a class="btn" href="kennedy-orchards.html">Read More</a>
+            <a class="btn" href="kennedy-orchards">Read More</a>
           </div>
         </div>
       </div>
@@ -218,7 +230,7 @@
         <div class="split-text">
           <h2 class="forest-title">Mulmur Cider Co</h2>
           <p>This initiative is dedicated to harnessing the abundant apples and pears that remain on the trees, transforming them into a flavorful and delightful cider blend.</p>
-          <a class="btn" href="mulmur-cider-co.html">Learn More</a>
+          <a class="btn" href="mulmur-cider-co">Learn More</a>
         </div>
       </div>
     </section>
@@ -250,12 +262,12 @@
         </div>
         <div class="footer-places">
         <div class="footer-place">
-          <h3><a href="royal-orchards.html">Royal Orchards</a></h3>
+          <h3><a href="royal-orchards">Royal Orchards</a></h3>
           <p>3105 16th Sideroad, King City<br>ON, L7B 1A3</p>
           <iframe class="map-embed" title="Map to Royal Orchards" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45952.548705168345!2d-79.565733!3d43.958656!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ad9d52a3cad5f%3A0xed8789a9229b6c78!2sROYAL%20ORCHARDS!5e0!3m2!1sen!2sca!4v1725468269010!5m2!1sen!2sca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer-place">
-          <h3><a href="kennedy-orchards.html">Kennedy Orchards</a></h3>
+          <h3><a href="kennedy-orchards">Kennedy Orchards</a></h3>
           <p>38 Townley St, Nottawa<br>ON, L0M 1P0</p>
           <iframe class="map-embed" title="Map to Kennedy Orchards" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11391.007278146937!2d-80.206361!3d44.45876!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a7b726564646b%3A0xa464966056446e9c!2sKennedy%20Orchards!5e0!3m2!1sen!2sca!4v1725468306247!5m2!1sen!2sca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

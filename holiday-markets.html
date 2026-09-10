@@ -1,13 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Holiday Markets | JC Agri Orchards</title>
   <meta name="description" content="Find JC Agri Orchards at holiday markets in Keswick, Uxbridge, East Gwillimbury, King City, and Orillia. Check dates and plan your visit for cider and apples.">
   <meta name="keywords" content="holiday markets, JC Agri Orchards markets, Keswick, Uxbridge, East Gwillimbury, King City, Orillia, apple cider">
   <meta name="author" content="Collingwood Web Design">
-  <link rel="canonical" href="https://jcagriorchards.ca/holiday-markets/">
+  <link rel="canonical" href="https://jcagriorchards.ca/holiday-markets">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -18,7 +30,7 @@
   <meta property="og:description" content="Find JC Agri Orchards at holiday markets in Keswick, Uxbridge, East Gwillimbury, King City, and Orillia. Check dates and plan your visit for cider and apples.">
   <meta property="og:image" content="https://media.cwd-cdn.com/jc-agri-orchards/images/nov-9.jpg">
   <meta property="og:image:alt" content="JC Agri Orchards holiday market poster">
-  <meta property="og:url" content="https://jcagriorchards.ca/holiday-markets/">
+  <meta property="og:url" content="https://jcagriorchards.ca/holiday-markets">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Holiday Markets | JC Agri Orchards">
   <meta name="twitter:description" content="Find JC Agri Orchards at holiday markets in Keswick, Uxbridge, East Gwillimbury, King City, and Orillia. Check dates and plan your visit for cider and apples.">
@@ -30,21 +42,21 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://jcagriorchards.ca/holiday-markets/#webpage",
+        "@id": "https://jcagriorchards.ca/holiday-markets#webpage",
         "name": "Holiday Markets | JC Agri Orchards",
         "description": "Find JC Agri Orchards at holiday markets in Keswick, Uxbridge, East Gwillimbury, King City, and Orillia. Check dates and plan your visit for cider and apples.",
-        "url": "https://jcagriorchards.ca/holiday-markets/",
+        "url": "https://jcagriorchards.ca/holiday-markets",
         "isPartOf": { "@type": "WebSite", "name": "JC Agri Orchards", "url": "https://jcagriorchards.ca/" },
-        "breadcrumb": { "@id": "https://jcagriorchards.ca/holiday-markets/#breadcrumb" },
+        "breadcrumb": { "@id": "https://jcagriorchards.ca/holiday-markets#breadcrumb" },
         "inLanguage": "en-CA"
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://jcagriorchards.ca/holiday-markets/#breadcrumb",
+        "@id": "https://jcagriorchards.ca/holiday-markets#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jcagriorchards.ca/" },
-          { "@type": "ListItem", "position": 2, "name": "Pick Your Own", "item": "https://jcagriorchards.ca/pick-your-own/" },
-          { "@type": "ListItem", "position": 3, "name": "Holiday Markets", "item": "https://jcagriorchards.ca/holiday-markets/" }
+          { "@type": "ListItem", "position": 2, "name": "Pick Your Own", "item": "https://jcagriorchards.ca/pick-your-own" },
+          { "@type": "ListItem", "position": 3, "name": "Holiday Markets", "item": "https://jcagriorchards.ca/holiday-markets" }
         ]
       }
     ]
@@ -70,22 +82,22 @@
   </div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/jc-agri-orchards/images/logo.png" width="150" height="70" alt="JC Agri Orchards"></a>
+      <a class="logo" href="./"><img src="https://media.cwd-cdn.com/jc-agri-orchards/images/logo.png" width="150" height="70" alt="JC Agri Orchards"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
       <nav class="site-nav" id="site-nav">
         <ul>
-          <li><a href="orchard-management.html">Orchard Management</a></li>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="the-team.html">The Team</a></li>
+          <li><a href="orchard-management">Orchard Management</a></li>
+          <li><a href="./">About Us</a></li>
+          <li><a href="the-team">The Team</a></li>
           <li class="has-sub">
-            <a href="pick-your-own.html" class="is-current">Pick Your Own</a>
+            <a href="pick-your-own" class="is-current">Pick Your Own</a>
             <ul class="sub-menu">
-              <li><a href="royal-orchards.html">Royal Orchards</a></li>
-              <li><a href="kennedy-orchards.html">Kennedy Orchards</a></li>
-              <li><a href="large-group-event.html">Large Group Event</a></li>
+              <li><a href="royal-orchards">Royal Orchards</a></li>
+              <li><a href="kennedy-orchards">Kennedy Orchards</a></li>
+              <li><a href="large-group-event">Large Group Event</a></li>
             </ul>
           </li>
-          <li><a href="mulmur-cider-co.html">Mulmur Cider Co</a></li>
+          <li><a href="mulmur-cider-co">Mulmur Cider Co</a></li>
         </ul>
       </nav>
     </div>
@@ -166,12 +178,12 @@
         </div>
         <div class="footer-places">
         <div class="footer-place">
-          <h3><a href="royal-orchards.html">Royal Orchards</a></h3>
+          <h3><a href="royal-orchards">Royal Orchards</a></h3>
           <p>3105 16th Sideroad, King City<br>ON, L7B 1A3</p>
           <iframe class="map-embed" title="Map to Royal Orchards" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45952.548705168345!2d-79.565733!3d43.958656!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ad9d52a3cad5f%3A0xed8789a9229b6c78!2sROYAL%20ORCHARDS!5e0!3m2!1sen!2sca!4v1725468269010!5m2!1sen!2sca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer-place">
-          <h3><a href="kennedy-orchards.html">Kennedy Orchards</a></h3>
+          <h3><a href="kennedy-orchards">Kennedy Orchards</a></h3>
           <p>38 Townley St, Nottawa<br>ON, L0M 1P0</p>
           <iframe class="map-embed" title="Map to Kennedy Orchards" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11391.007278146937!2d-80.206361!3d44.45876!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a7b726564646b%3A0xa464966056446e9c!2sKennedy%20Orchards!5e0!3m2!1sen!2sca!4v1725468306247!5m2!1sen!2sca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
