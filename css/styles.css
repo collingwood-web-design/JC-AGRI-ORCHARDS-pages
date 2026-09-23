@@ -696,6 +696,13 @@ a.circle-link {
   letter-spacing: 0.03em;
   line-height: 1.6;
 }
+.entry-note {
+  color: var(--lime);
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.65rem;
+}
 
 .cta-band {
   position: relative;
