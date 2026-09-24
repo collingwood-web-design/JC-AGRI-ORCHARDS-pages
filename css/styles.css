@@ -3,6 +3,7 @@
   --lime-soft: rgba(106, 158, 42, 0.31);
   --forest: #143711;
   --plum: #442854;
+  --brand-red: #9c2f2f;
   --cream: #f7f4ec;
   --white: #ffffff;
   --ink: #3d3d3d;
@@ -423,6 +424,31 @@ h2.forest,
 .note p:last-child { margin-bottom: 0; }
 .note a { color: var(--ink); text-decoration: none; }
 .note a:hover { color: var(--forest); }
+.note-feature {
+  background: var(--cream);
+  border-left: 6px solid var(--lime);
+  padding: 1rem 1.15rem 1.1rem 1.25rem;
+  margin: 1.35rem 0 1.5rem;
+}
+.note-feature h3 {
+  color: var(--forest);
+  font-size: 1.2rem;
+  margin: 0 0 0.55rem;
+}
+.note-feature a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.note-feature a:hover { color: var(--lime); }
+.note-feature-cta {
+  color: var(--lime);
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.75rem !important;
+}
 .ig-btn {
   display: inline-grid;
   place-items: center;
@@ -581,6 +607,14 @@ a.circle-link {
   width: 2.4rem;
   padding-right: 0;
   text-align: right;
+}
+.music-cal tr.is-event td {
+  color: var(--brand-red);
+  font-weight: 700;
+  border-bottom-color: var(--brand-red);
+}
+.music-cal tr.is-event td:first-child {
+  color: var(--brand-red);
 }
 .ig-mini {
   display: inline-grid;
