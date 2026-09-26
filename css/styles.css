@@ -616,6 +616,12 @@ a.circle-link {
 .music-cal tr.is-event td:first-child {
   color: var(--brand-red);
 }
+.ig-mini.link-mini {
+  background: var(--brand-red);
+}
+.ig-mini.link-mini:hover {
+  background: var(--forest);
+}
 .ig-mini {
   display: inline-grid;
   place-items: center;
@@ -736,6 +742,10 @@ a.circle-link {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-top: 0.65rem;
+}
+.closure-note {
+  color: var(--forest);
+  margin-top: 0.55rem;
 }
 
 .cta-band {
